@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "人员晨检详情",
+  "usingComponents": {
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore"
+  }
+}

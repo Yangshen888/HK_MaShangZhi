@@ -1,0 +1,21 @@
+
+.wrap {
+	padding: 30rpx;
+}
+.lyBtn {
+	position: fixed;
+	bottom: 80rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	width: 600rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 40rpx;
+	background-image: -webkit-linear-gradient(80deg, rgba(184, 226, 255, 1) 0%, rgba(0, 151, 255, 1) 100%);
+	background-image: linear-gradient(10deg, rgba(184, 226, 255, 1) 0%, rgba(0, 151, 255, 1) 100%);
+	color: rgba(255, 255, 255, 1);
+	font-weight: 600;
+	font-size: 32rpx;
+}
+

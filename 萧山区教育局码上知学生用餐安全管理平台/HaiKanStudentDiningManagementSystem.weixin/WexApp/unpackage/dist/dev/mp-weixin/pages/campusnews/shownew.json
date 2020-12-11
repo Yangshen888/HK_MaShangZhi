@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "文化详情",
+  "usingComponents": {
+    "u-loading": "/uview-ui/components/u-loading/u-loading",
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
+}

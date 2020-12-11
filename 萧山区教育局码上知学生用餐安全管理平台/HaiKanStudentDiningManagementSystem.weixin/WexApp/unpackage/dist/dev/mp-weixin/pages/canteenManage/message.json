@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "人员培训信息",
+  "usingComponents": {
+    "u-icon": "/uview-ui/components/u-icon/u-icon"
+  }
+}

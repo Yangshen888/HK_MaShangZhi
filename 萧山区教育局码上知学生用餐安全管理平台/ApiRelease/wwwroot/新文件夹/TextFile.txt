@@ -1,0 +1,12 @@
+﻿Scaffold-DbContext “Data Source=192.168.0.214.;Initial Catalog=mashangzhi;Persist Security Info=True;User ID=mashangzhi;Password=haikan051030” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Context haikanSDMSContext -force
+Scaffold-DbContext “Data Source=18069772305.qicp.vip,27800;Initial Catalog=mashangzhi;Persist Security Info=True;User ID=mashangzhi;Password=haikan051030” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Context haikanSDMSContext -force
+
+
+optionsBuilder.UseSqlServer("Data Source=172_17_0_4\\JIULONGCLOUD;Initial Catalog=mashangzhi;Persist Security Info=True;User ID=mashangzhi;Password=haikan051030");
+
+
+
+
+Scaffold-DbContext "server=192.168.0.174;userid=root;pwd=root;port=3306;database=iot_tool_msa;sslmode=none;" Pomelo.EntityFrameworkCore.MySql -OutputDir MYEntities -Context haikanITMContext -Force
+
+Scaffold-DbContext "server=192.168.0.174;userid=root;pwd=root;port=3306;database=dining-ent;sslmode=none;" Pomelo.EntityFrameworkCore.MySql -OutputDir MYDEntities -Context haikanITMDContext -Force

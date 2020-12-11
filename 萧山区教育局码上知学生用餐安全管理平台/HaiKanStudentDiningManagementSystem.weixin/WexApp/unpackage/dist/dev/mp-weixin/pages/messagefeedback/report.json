@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "举报信箱",
+  "usingComponents": {
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-field": "/uview-ui/components/u-field/u-field"
+  }
+}

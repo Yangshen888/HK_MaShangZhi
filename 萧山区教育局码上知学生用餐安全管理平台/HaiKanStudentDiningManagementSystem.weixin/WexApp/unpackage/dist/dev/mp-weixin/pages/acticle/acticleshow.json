@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "食堂账务详情",
+  "usingComponents": {
+    "u-card": "/uview-ui/components/u-card/u-card",
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
+}

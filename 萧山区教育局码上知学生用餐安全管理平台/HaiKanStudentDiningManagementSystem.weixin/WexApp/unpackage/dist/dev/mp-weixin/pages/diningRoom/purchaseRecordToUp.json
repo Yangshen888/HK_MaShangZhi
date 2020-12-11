@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "采购记录上传",
+  "usingComponents": {
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-field": "/uview-ui/components/u-field/u-field",
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-select": "/uview-ui/components/u-select/u-select",
+    "easy-upload": "/components/easy-upload/easy-upload"
+  }
+}

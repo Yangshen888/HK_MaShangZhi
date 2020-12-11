@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "问卷填写",
+  "usingComponents": {
+    "u-radio-group": "/uview-ui/components/u-radio-group/u-radio-group",
+    "u-radio": "/uview-ui/components/u-radio/u-radio",
+    "u-checkbox-group": "/uview-ui/components/u-checkbox-group/u-checkbox-group",
+    "u-checkbox": "/uview-ui/components/u-checkbox/u-checkbox",
+    "u-input": "/uview-ui/components/u-input/u-input"
+  }
+}

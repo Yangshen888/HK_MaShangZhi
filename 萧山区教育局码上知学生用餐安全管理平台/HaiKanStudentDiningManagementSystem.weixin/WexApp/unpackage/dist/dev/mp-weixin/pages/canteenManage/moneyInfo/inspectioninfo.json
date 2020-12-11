@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "人员晨检详情",
+  "usingComponents": {
+    "u-back-top": "/uview-ui/components/u-back-top/u-back-top",
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore"
+  }
+}

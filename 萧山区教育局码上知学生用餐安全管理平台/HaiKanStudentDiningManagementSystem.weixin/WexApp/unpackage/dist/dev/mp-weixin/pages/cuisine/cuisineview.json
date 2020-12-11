@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "菜品库列表",
+  "usingComponents": {
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-toast": "/uview-ui/components/u-toast/u-toast"
+  }
+}

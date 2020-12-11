@@ -1,0 +1,91 @@
+<template>
+	<view style="padding: 20rpx;">
+		<view style="padding: 30rpx;background-color: rgba(255, 255, 255, 1);">
+			<view style="font-size: 30rpx;font-weight: 600;margin: 10rpx 0;">基础信息</view>
+			<view class="infoBox">
+				<view class="infoItem">
+					<view style="float: left;">时间：</view>
+					<view style="float: right;">{{info.createdAt}}</view>
+				</view>
+				<view class="infoItem">
+					<view style="float: left;">主题选择：</view>
+					<view style="float: right;">{{info.subjectName}}</view>
+				</view>
+				<view class="infoItem">
+					<view style="float: left;">活动负责人：</view>
+					<view style="float: right;">{{info.reperson}}</view>
+				</view>
+				<view class="infoItem">
+					<view style="float: left;">持续时间：</view>
+					<view style="float: right;">{{info.continueTime}}分钟</view>
+				</view>
+				<view class="infoItem">
+					<view style="float: left;">参与部门：</view>
+					<view style="float: right;">{{info.departmentName}}</view>
+				</view>
+				<view class="infoItem">
+					<view style="float: left;">参与人数：</view>
+					<view style="float: right;">{{info.number}}</view>
+				</view>
+				<view style="float: left;width: 100%;line-height: 52rpx;padding: 10rpx 0;" >
+					<view style="float: left;margin-bottom: 16rpx;">活动介绍：</view>
+					<view style="float: left;background-color: rgba(234, 234, 234, 1);width: 100%;border-radius: 10rpx;min-height: 200rpx;word-break: break-all;padding: 10rpx;">
+						{{info.introduce}}
+					</view>
+				</view>
+				<view style="float: left;width: 100%;line-height: 52rpx;padding: 10rpx 0;" >
+					<view style="float: left;margin-bottom: 16rpx;">备注：</view>
+					<view style="float: left;background-color: rgba(234, 234, 234, 1);width: 100%;border-radius: 10rpx;min-height: 200rpx;word-break: break-all;padding: 10rpx;">
+						{{info.result}}
+					</view>
+				</view>
+				<view style="float: left;width: 100%;line-height: 52rpx;padding: 16rpx 0;">活动照片上传</view>
+				<image :src="item" v-for="(item,index) in imgs" style="border-radius: 10rpx;"></image>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import {
+		LedgerInfo
+	} from '@/api/canteenManage/money.js';
+	export default {
+		data() {
+			return {
+				id: -1,
+				info:{},
+				imgs:[],
+			}
+		},
+		onLoad(opt) {
+			this.id = opt.id;
+			this.getSampleInfo();
+		},
+		methods: {
+			getSampleInfo() {
+				LedgerInfo(this.id).then(res => {
+					console.log(res)
+					console.log(this.id)
+					this.info=res.data.data;
+					this.imgs=res.data.data.imgs.split(',');
+					for(let i=0;i<this.imgs.length;i++){
+						if(i>0){
+							this.imgs[i]=this.imgs[i];
+						}
+					}
+				});
+			}
+		}
+	}
+</script>
+
+<style>
+	.infoItem{
+		float: left;
+		width: 100%;
+		line-height: 52rpx;
+		padding: 16rpx 0;
+		border-bottom: 1rpx solid rgba(234, 234, 234, 1);
+	}
+</style>

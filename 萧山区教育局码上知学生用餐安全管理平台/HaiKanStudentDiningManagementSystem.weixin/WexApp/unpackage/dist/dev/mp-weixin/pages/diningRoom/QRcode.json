@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "支付二维码",
+  "usingComponents": {
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
+}

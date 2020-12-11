@@ -1,0 +1,4345 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaiKanStudentDiningManagementSystem.Api</name>
+    </assembly>
+    <members>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings">
+            <summary>
+            JWT授权的配置项
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings.Secret">
+            <summary>
+            应用密钥(真实项目中可能区分应用,不同的应用对应惟一的密钥)
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Auth.JwtBearerAuthenticationExtension.AddJwtBearerAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings)">
+            <summary>
+            注册JWT Bearer认证服务的静态扩展方法
+            </summary>
+            <param name="services"></param>
+            <param name="appSettings">JWT授权的配置项</param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Configurations.AppSettings">
+            <summary>
+            程序配置选项
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Configurations.AppSettings.IsTrialVersion">
+            <summary>
+            是否是体验版
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.AccountController.#ctor(Microsoft.Extensions.Options.IOptions{HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings},HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.AccountController.Profile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.AccountController.Menu">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.MenuItemHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.MenuItemHelper.BuildTree(System.Collections.Generic.List{HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuItem},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.GetList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.General.GeneralRequestPayload)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.Edit(System.Object)">
+            <summary>
+            编辑（保存）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.Delete(System.String)">
+            <summary>
+            删除单个
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.GetAppList(System.String)">
+            <summary>
+            获取app列表
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Acticle.ActicleController.GetAppShow(System.String)">
+            <summary>
+            获取app列表
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.campusnews.campusnewsController.NewsList(System.Object)">
+            <summary>
+            查看菜品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.campusnews.campusnewsController.LifeList(System.Object)">
+            <summary>
+            查看
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.campusnews.campusnewsController.GetPicture(System.String)">
+            <summary>
+            获取图片
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.campusnews.campusnewsController.GetContent(System.String)">
+            <summary>
+            获取正文
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.AppMessageController.MessageList(System.Object)">
+            <summary>
+            查看菜品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.AppMoneyController.MoneyList(System.Object)">
+            <summary>
+            查看菜品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.AppPlanController.PlanList(System.Object)">
+            <summary>
+            查看菜品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.MessageList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.canteenManagement.manageMessageRequestpayload)">
+            <summary>
+            菜品库列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.MessageGet(System.Guid)">
+            <summary>
+            获取菜品信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.Edit(System.Object)">
+            <summary>
+            编辑（保存）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.Import(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.canteenManagement.manageMessageController.Export(System.String)">
+            <summary>
+            导出菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.ManagePlanList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.canteenManagement.ManagePlanRequestpayload)">
+            <summary>
+            菜品库列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.PlanGet(System.Guid)">
+            <summary>
+            获取菜品信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.新文件夹.managePlanController.Edit(System.Object)">
+            <summary>
+            编辑（保存）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.MoneyList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.canteenManagement.moneyRequestpayload)">
+            <summary>
+            校园新闻列表展示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.canteenManageent.moneyViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.MoneyEdit(HaiKanStudentDiningManagementSystem.Api.ViewModels.canteenManageent.moneyViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.Import(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.moneyController.Export(System.String)">
+            <summary>
+            导出菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.AppQualityController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.AppQualityController.FliesList(System.Object)">
+            <summary>
+            查看菜品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.AppQualityController.GetPicture(System.String)">
+            <summary>
+            获取图片
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.AppQualityController.GetContent(System.String)">
+            <summary>
+            获取正文
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.QualityList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Quality.QualityRequestpayload)">
+            <summary>
+            质量文件列表展示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Quality.QualityViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.QualityEdit(System.Object)">
+            <summary>
+            编辑（保存）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.UpLoadAsync(System.String)">
+            <summary>
+            文件上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.DeletetoFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Quality.QualityController.GetEncoding(System.IO.FileStream,System.Text.Encoding)">
+            <summary>   
+            取得一个文本文件流的编码方式。   
+            </summary>   
+            <param name="stream">文本文件流。</param>   
+            <param name="defaultEncoding">默认编码方式。当该方法无法从文件的头部取得有效的前导符时，将返回该编码方式。</param>   
+            <returns></returns>   
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Class.ClassRequestpayload)">
+            <summary>
+            班级列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Class.ClassViewModel)">
+            <summary>
+            添加学校
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Class.ClassViewModel)">
+            <summary>
+            编辑（保存）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.Load(System.Guid)">
+            <summary>
+            查询单条班级信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.Delete(System.String)">
+            <summary>
+            删除班级
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.Batch(System.String,System.String)">
+            <summary>
+            批量
+            </summary>
+            <param name="command"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Class.ClassController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.AppCuisineController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.AppCuisineController.List(System.Object)">
+            <summary>
+            查看菜品
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.AppCuisineController.Givelike(System.Guid)">
+            <summary>
+            点赞
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.AppCuisineController.GetCuisine(System.Guid)">
+            <summary>
+            详情
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.CuisineList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Cuisine.CuisineRequestpayload)">
+            <summary>
+            菜品库列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.CuisineCreate(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.SchoolList">
+            <summary>
+            获取学校信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.IngredientGet(System.String)">
+            <summary>
+            获取食材信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.IngredientGet2(System.String)">
+            <summary>
+            获取食材信息(添加/二次编辑)
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.CuisineGet(System.Guid)">
+            <summary>
+            获取菜品信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.CuisineEdit(System.Object)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.CuisineImport(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.ExportPass(System.String)">
+            <summary>
+            导出菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Cuisine.CuisineController.List">
+            <summary>
+            菜品下拉选择列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.DiningRoom.DiningRoomRequestPayload)">
+            <summary>
+            厨房食品列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.DiningRoomViewModel)">
+            <summary>
+            添加视频信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.Edit(System.Guid)">
+            <summary>
+            编辑视频信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.DiningRoomViewModel)">
+            <summary>
+            保存编辑后的视频信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.Delete(System.String)">
+            <summary>
+            删除视频
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.Batch(System.String,System.String)">
+            <summary>
+            批量
+            </summary>
+            <param name="command"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.UpLoadAsync(System.String)">
+            <summary>
+            视频上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.VideoFile)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.KitchenVideoController.showVideo(System.String,System.String,System.String)">
+            <summary>
+            小程序视频列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.DiningRoom.DiningRoomRequestPayload)">
+            <summary>
+            每餐实拍列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.FoodName(System.String,HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext)">
+            <summary>
+            获取食材名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LiveShotViewModel)">
+            <summary>
+            添加每餐实拍
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.Edit(System.Guid)">
+            <summary>
+            编辑每餐实拍
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LiveShotViewModel)">
+            <summary>
+            保存编辑后的每餐实拍
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.Delete(System.String)">
+            <summary>
+            删除每餐实拍
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.Batch(System.String,System.String)">
+            <summary>
+            批量
+            </summary>
+            <param name="command"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.VideoUpLoadAsync(System.String)">
+            <summary>
+            视频上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.VideoDeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.VideoFile)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.CuisineList(System.String,System.String)">
+            <summary>
+            菜品下拉选择列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.GetPictureList(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            wxapp显示实拍图片列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.LoadPaths(System.String)">
+            <summary>
+            路径切割
+            </summary>
+            <param name="accessory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.GeTimeHorizon">
+            <summary>
+            每餐实拍的时间选择列表(上周一到下周日)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.DiningRoom.LiveShotController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Process.FlowRequestPayload)">
+            <summary>
+            流程列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.wlcreate(System.Object)">
+            <summary>
+            网络上传
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.WriteBytesToFile(System.String,System.Byte[])">
+            <summary>
+            将图片字节写入文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.show(System.Guid)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.Edit(System.Object)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.AppCreate(System.Object)">
+            <summary>
+            小程序成菜流程添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.AppList(System.Object)">
+            <summary>
+            小程序成菜流程列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.FlowController.LoadPaths(System.String)">
+            <summary>
+            路径切割
+            </summary>
+            <param name="accessory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Process.ProcessRequestPayload)">
+            <summary>
+            成菜流程列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.State(HaiKanStudentDiningManagementSystem.Api.Entities.MealFlow,System.Collections.Generic.List{HaiKanStudentDiningManagementSystem.Api.Entities.SystemUser})">
+            <summary>
+            已完成状态
+            </summary>
+            <param name="x"></param>
+            <param name="list2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Process.ProcessViewModel)">
+            <summary>
+            添加成菜流程
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.Edit(System.Guid)">
+            <summary>
+            编辑成菜流程信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Process.ProcessViewModel)">
+            <summary>
+            保存编辑的成菜流程信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.Delete(System.String)">
+            <summary>
+            删除流程
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.Batch(System.String,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="command"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.FoodName(System.String,System.Collections.Generic.List{HaiKanStudentDiningManagementSystem.Api.Entities.Ingredient})">
+            <summary>
+            获取食材名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.FoodProcess.ProcessController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.home.homeController.price">
+            <summary>
+            价格变动
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.home.homeController.OldPurchase(System.Guid)">
+            <summary>
+            上周价格
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.home.homeController.NewPurchase(System.Guid)">
+            <summary>
+            最近价格
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Ingredient.IngredientRequestpayload)">
+            <summary>
+            食材库列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.FoodTypeList">
+            <summary>
+            类型列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Ingredient.IngredientViewModel)">
+            <summary>
+            创建食材信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Edit(System.Guid)">
+            <summary>
+            编辑食材信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Ingredient.IngredientViewModel)">
+            <summary>
+            保存编辑的食材信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Delete(System.String)">
+            <summary>
+            删除食材信息
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Batch(System.String,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="command"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Get(System.String)">
+            <summary>
+            根据名字获取食材
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.Get2(System.String)">
+            <summary>
+            根据名字获取食材(添加/二次编辑)
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.IngredientController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Ingredient.PurchaseRecordRequestPayload)">
+            <summary>
+            采购记录列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Ingredient.PurchaseRecordViewModel)">
+            <summary>
+            添加采购记录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Edit(System.Guid)">
+            <summary>
+            编辑采购记录
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Load(System.String)">
+            <summary>
+            通过名字加载食材
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Ingredient.PurchaseRecordViewModel)">
+            <summary>
+            保存编辑后的采购记录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Delete(System.String)">
+            <summary>
+            删除采购记录
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Batch(System.String,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="command"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.PurchaseRecordList(System.String,System.String,System.Int32)">
+            <summary>
+            采购价格公示
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.PurchaseInfo(System.String)">
+            <summary>
+            采购信息详情
+            </summary>
+            <param name="uuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.Import(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ingredient.PurchaseRecordController.ExportPass">
+            <summary>
+            导出信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ledger.AllLedgerController.LedgerList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Ledger.LedgerQuery)">
+            <summary>
+            电子台账列表
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ledger.AllLedgerController.LedgerInfo(System.UInt64)">
+            <summary>
+            电子台账详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Ledger.AllLedgerController.L_test">
+            <summary>
+            测试mysql连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.AppWeekMenuController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.AppWeekMenuController.time(System.Guid)">
+            <summary>
+            时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.WeekMenuController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.WeekMenuController.cuisineList(System.String)">
+            <summary>
+            菜品列表
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.WeekMenuController.WeekMenuCreate(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.WeekMenuController.Getweekmenu(System.String,System.String)">
+            <summary>
+            获取菜单数据
+            </summary>
+            <param name="time"></param>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.WeekMenuController.WeekMenuEdit(System.Object)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Menu.WeekMenuController.time">
+            <summary>
+            时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.MessageBoardController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.MessageBoardController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.MessageFeedBack.MessageBoardRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.MessageBoardController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.MessageBoardController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.MessageBoardViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.ReportController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.ReportController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.MessageFeedBack.ReportRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.ReportController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.ReportController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.ReportViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.MessageFeedBack.SurveyRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.ListQuestion(System.Guid)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.ListQuestionItem(System.Guid)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.SurveyViewModel)">
+            <summary>
+            问卷创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.CreateQuestion(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.SurveyQuestionsViewModel)">
+            <summary>
+            问卷题目创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.CreateQuestionItem(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.SurveyQuestionsItemsViewModel)">
+            <summary>
+            问卷题目选项创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.OpenOrClose(System.Guid)">
+            <summary>
+            开始/结束问卷
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.SurveyViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.EditQuestion(System.Guid)">
+            <summary>
+            编辑题目
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.EditQuestion(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.SurveyQuestionsViewModel)">
+            <summary>
+            保存编辑后的题目信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.EditQuestionItem(System.Guid)">
+            <summary>
+            编辑题目
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.EditQuestionItem(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.SurveyQuestionsItemsViewModel)">
+            <summary>
+            保存编辑后的选项信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.DeleteQuestion(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.DeleteQuestionItem(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.UpdateIsDeleteQuestion(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.UpdateIsDeleteQuestionItem(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.SurveyController.SurveyDetail(System.Guid)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxMessageBoardController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxMessageBoardController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.WxMessageBoardViewModel)">
+            <summary>
+            留言板创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxMessageBoardController.CreateReport(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.WxReportViewModel)">
+            <summary>
+            举报信箱创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxMessageBoardController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.MessageFeedBack.WxMessageBackRequestPayload)">
+            <summary>
+            显示所有可以申请的岗位
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxSurveyController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxSurveyController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.MessageFeedBack.WxSurveyRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxSurveyController.SurveyDetail(System.Guid)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.MessageFeedBack.WxSurveyController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.MessageFeedBack.WxSurveyAnswerViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController">
+            <summary>
+            权限控制器
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.SchoolJourList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.SchoolJour.SchoolJourRequestpayload)">
+            <summary>
+            菜品库列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.SchoolList(System.String)">
+            <summary>
+            获取学校信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.SchoolJour.SchoolJourViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.SchoolJourEdit(HaiKanStudentDiningManagementSystem.Api.ViewModels.SchoolJour.SchoolJourViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolJourController.DeletetoFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.SchoolLifeList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.SchoolLife.SchoolLifeRequestpayload)">
+            <summary>
+            校园新闻列表展示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.SchoolLife.SchoolLifeViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.SchoolLifeEdit(HaiKanStudentDiningManagementSystem.Api.Entities.SchoolLife)">
+            <summary>
+            编辑（保存）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.NewsReport.SchoolLifeController.DeletetoFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Picture.PictureController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Picture.PictureController.PicResultData">
+            <summary>
+            返回图片结果
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.GetList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.MorningCheckRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.GetfoGet(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.GetCreate(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.DisinfectionViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.GetEdit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.DisinfectionViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.UpdateIsDelete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.methodList">
+            <summary>
+            消毒方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.disinfectionList">
+            <summary>
+            消毒对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.ccList">
+            <summary>
+            消毒餐次
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.roomList">
+            <summary>
+            消毒间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.toolList">
+            <summary>
+            消毒工具
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.userList">
+            <summary>
+            该组织下人员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.UsersList">
+            <summary>
+            人员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.aCreate(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.DisinfectionViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.ashow(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.aEdit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.DisinfectionViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.aDelete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.aUpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.DisinfectionController.aBatch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.MorningCheckRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Load(System.UInt64)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.MorningCheckViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.MorningCheckViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.UpdateIsDelete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.InfoList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.MorningCheckInfoRequestPayload)">
+            <summary>
+            查询某个晨检的详细信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.CreateInfo(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.InspectionInformationVModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.LoadInfo(System.UInt64)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.EditInfo(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.InspectionInformationVModel)">
+            <summary>
+            保存标记
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Batch2(System.String,System.String,System.UInt32,System.UInt32)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.UpdateIsDelete2(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.DepList">
+            <summary>
+            获取部门列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.Typelist">
+            <summary>
+            获取晨检类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.MorningCheckController.UsersList">
+            <summary>
+            人员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.PesticideRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.VList">
+            <summary>
+            果蔬品名
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.PesticideViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.show(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.PesticideViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.UpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PesticideController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.GetList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.PurchasesInfoRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.GetfoGet(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.UsersList">
+            <summary>
+            人员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.TypesList">
+            <summary>
+            品种列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.GetCreate(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.PurchasesInfoViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.GetEdit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.PurchasesInfoViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.UpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.PartList">
+            <summary>
+            单位列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.aCreate(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.PurchaseInformationViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.ashow(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.aEdit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.PurchaseInformationViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.aDelete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.aUpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.PurchasesInfoController.aBatch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.PesticideRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.foodList(System.String)">
+            <summary>
+            菜品
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.SamplesViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.show(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.SamplesViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.UpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SamplesController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.PesticideRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.TypesList">
+            <summary>
+            主题列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.DepartList">
+            <summary>
+            部门列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.UsersList">
+            <summary>
+            人员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.SynthesizesViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.show(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.SynthesizesViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.UpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.SynthesizeController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.PurchasesInfo.PesticideRequestPayload)">
+            <summary>
+             列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.PartList">
+            <summary>
+            单位列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.WasteViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.show(System.String)">
+            <summary>
+            获取当前行信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.PurchasesInfo.WasteViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.UpdateIsDelete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.PurchasesInfo.WasteController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.IconController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.IconController.FindByKeyword(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload)">
+            <summary>
+            角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleCreateViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Edit(System.Guid)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="guid">角色惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleCreateViewModel)">
+            <summary>
+            保存编辑后的角色信息
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Delete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Recover(System.String)">
+            <summary>
+            恢复角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.AssignPermission(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload)">
+            <summary>
+            为指定角色分配权限
+            </summary>
+            <param name="payload">角色分配权限的请求载体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.FindListByUserGuid(System.Guid)">
+            <summary>
+            获取指定用户的角色列表
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.FindSimpleList">
+            <summary>
+            查询所有角色列表(只包含主要的字段信息:name,code)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.School.SchoolRequestPayload)">
+            <summary>
+            学校列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.List">
+            <summary>
+            可用学校列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.List1">
+            <summary>
+            可用学校列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.List2">
+            <summary>
+            后台可用学校列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.GetLink(System.String)">
+            <summary>
+            获取学校link
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.School.SchoolViewModel)">
+            <summary>
+            添加学校
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.Edit(System.Guid)">
+            <summary>
+            编辑学校信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.School.SchoolViewModel)">
+            <summary>
+            保存编辑后的学校信息
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.Delete(System.String)">
+            <summary>
+            删除学校
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.Recover(System.String)">
+            <summary>
+            恢复学校
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">用户ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.GetSchoolName(System.String)">
+            <summary>
+            根据guid获取学校名称
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.GetSchoolInfo(System.String)">
+            <summary>
+            根据学校名称获取学校信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.GetSchoolInfo2(System.String)">
+            <summary>
+            根据学校id获取学校信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            批量删除/恢复
+            </summary>
+            <param name="isDelete"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.GetWXMenuList">
+            <summary>
+            获取微信菜单列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.DeleteFile(HaiKanStudentDiningManagementSystem.Api.ViewModels.DiningRoom.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="lsp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.SchoolController.ToSync">
+            <summary>
+            同步食材....
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{HaiKanStudentDiningManagementSystem.Api.Configurations.MdDesEncrypt},Microsoft.Extensions.Options.IOptions{HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings})">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserCreateViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Edit(System.Guid)">
+            <summary>
+            编辑用户
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserEditViewModel)">
+            <summary>
+            保存编辑后的用户信息
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.EditIsUpload(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserEditViewModel)">
+            <summary>
+            是否启用视频上传
+            </summary>
+            <param name="guid"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.EditUserPwd(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPwdViewModel)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Delete(System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Recover(System.String)">
+            <summary>
+            恢复用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">用户ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.SetIDCard(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.IdCardInfo)">
+            <summary>
+            绑定身份证号
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.GetStaffList">
+            <summary>
+            获取学校员工下拉选项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.GetStaffList2">
+            <summary>
+            获取学校员工下拉选项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.SaveRoles(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel)">
+            <summary>
+            保存用户-角色的关系映射数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentBillController.GetBillInfo(System.String,System.Nullable{System.Guid})">
+            <summary>
+            获取学生信息
+            </summary>
+            <param name="idcard"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentBillController.Unifiedorder(HaiKanStudentDiningManagementSystem.Api.ViewModels.Pay.UnidiedorderData)">
+            <summary>
+            统一下单(生成预支付交易单,返回信息后在小程序中调起支付)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentBillController.ReurnPayApiUrl(System.String)">
+            <summary>
+            返回可用的微信支付地址（自动判断是否使用沙箱）
+            </summary>
+            <param name="urlFormat">如：<code>https://api.mch.weixin.qq.com/{0}pay/unifiedorder</code></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Student.StudentRequestPayload)">
+            <summary>
+            列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.show(System.Guid)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.Edit(System.Object)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.Import(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.Student.StudentController.ExportPass(System.String)">
+            <summary>
+            导出菜品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.ToUPPhotoController.UpPhoto(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.UpImage.ToUpPhotoController.UpPhoto(System.String,System.String)">
+            <summary>
+            图片对接上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.UserInfo.UserInfoController.GetUserList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.General.GeneralRequestPayload)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.UserInfo.UserInfoController.GetUserInfo(System.Int32)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostjobsAppealController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostjobsAppealController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.WorkStudy.PostJobsAppealRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostjobsAppealController.AuditPass(System.Guid)">
+            <summary>
+            审核_通过
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostjobsAppealController.AuditNoPass(System.Guid)">
+            <summary>
+            审核_不通过
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.WorkStudy.PostJobsRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.WorkStudy.PostjobsViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.WorkStudy.PostjobsViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.PostJobsController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.WxPostjobsController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.WxPostjobsController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.WorkStudy.WxPostJobsRequestPayload)">
+            <summary>
+            显示所有可以申请的岗位
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.WxPostjobsController.AppealList(HaiKanStudentDiningManagementSystem.Api.RequestPayload.WorkStudy.WxPostJobsAppealRequestPayload)">
+            <summary>
+            显示所有申请记录
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.WxPostjobsController.PostjobsDetial(System.Guid)">
+            <summary>
+            岗位详情
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WorkStudy.WxPostjobsController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.WorkStudy.WxPostjobsAppealViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.Api.V1.WxOpenID.WxInfoController.GetWechat(HaiKanStudentDiningManagementSystem.Api.ViewModels.WxOpenID.WechatModel)">
+            <summary>
+            获取openid
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.ErrorController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.ErrorController.Code(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.OauthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.OauthController.#ctor(Microsoft.Extensions.Options.IOptions{HaiKanStudentDiningManagementSystem.Api.Auth.AppAuthenticationSettings},HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,Microsoft.Extensions.Options.IOptions{HaiKanStudentDiningManagementSystem.Api.Configurations.MdDesEncrypt})">
+            <summary>
+            
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.OauthController.Auth(HaiKanStudentDiningManagementSystem.Api.Entities.User.UserData)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.OauthController.WXAuth2(HaiKanStudentDiningManagementSystem.Api.Entities.User.UserData)">
+            <summary>
+            微信端--手机号与密码登录
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.OauthController.WXAuth(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.WXUserInfo)">
+            <summary>
+            微信授权登录
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.OauthController.WXOpenAuth(System.String)">
+            <summary>
+            微信端--openid登录
+            </summary>
+            <param name="openid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Controllers.TestController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.TestController.Logger">
+            <summary>
+            测试日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.TestController.Log(System.String)">
+            <summary>
+            日志记录
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Controllers.TestController.PayNotifyXml(System.String,System.String)">
+            <summary>
+            收到财付通消息后返回的回调通知
+            </summary>
+            <param name="return_code"></param>
+            <param name="return_msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum">
+            <summary>
+            通用枚举类
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsLocked">
+            <summary>
+            是否已被锁定
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsLocked.UnLocked">
+            <summary>
+            未锁定
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsLocked.Locked">
+            <summary>
+            已锁定
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsEnabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsEnabled.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsEnabled.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.Status">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.Status.All">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.Status.Forbidden">
+            <summary>
+            已禁用
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.Status.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.PermissionType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.PermissionType.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.PermissionType.Action">
+            <summary>
+            按钮/操作/功能
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo">
+            <summary>
+            是否枚举
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextService.Configure(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextService.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextService.CurrentUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextService.IsAuthenticated">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextService.IsSupperAdministator">
+            <summary>
+            是否是超级管理员
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser">
+            <summary>
+            登录用户上下文
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.Guid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.DisplayName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.LoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.EmailAddress">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.Avator">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.Roleid">
+            <summary>
+            角色id
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.RoleName">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.SchoolGuid">
+            <summary>
+            督导员
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.AuthContext.AuthContextUser.SchoolName">
+            <summary>
+            学校名字
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.ConfigurationManager">
+            <summary>
+            配置文件管理器
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.ConfigurationManager.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.ConfigurationManager.AppSettings">
+            <summary>
+            读取配置文件[AppSettings]节点数据
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CanAccess">
+            <summary>
+            用户可以访问的控制器及操作权限
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CanAccess.Controller">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CanAccess.Actions">
+            <summary>
+            Action集合
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.OwnedApiPermission">
+            <summary>
+            用户拥有的API操作权限
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.OwnedApiPermission.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.OwnedApiPermission.CanAccesses">
+            <summary>
+            可以访问的API控制器集合
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.OwnedApiPermission.Can(System.String,System.String)">
+            <summary>
+            是否可以访问
+            </summary>
+            <param name="controller"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute.ActionAlias">
+            <summary>
+            操作的别名
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.ExceptionMiddleware">
+            <summary>
+            异常中间件
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.HttpException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.HttpException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.HttpException.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.UnauthorizeException">
+            <summary>
+            未授权的异常类
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.UnauthorizeException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.ValidateModelAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.CustomException.ValidateModelAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.EntityFrameworkExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.EntityFrameworkExtension.FromSql``1(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.String,System.Object)">
+            <summary>
+            调用ADO.NET执行SQL语句查询泛型集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="database">数据库连接上下文</param>
+            <param name="sql">SQL语句</param>
+            <param name="parameters">SQL语句需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.OrderByExtensions">
+            <summary>
+            排序静态扩展类
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.QueryParamNameAttribute">
+            <summary>
+            Use for an alternative param name other than the propery name
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.QueryParamIgnoreAttribute">
+            <summary>
+            Ignore this property
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor">
+            <summary>
+            Convert a base data type to another base data type
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.DbType)">
+            <summary>
+            Convert db type to .Net data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL type to .Net data type
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToDbType(System.Type)">
+            <summary>
+            Convert .Net type to Db type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToDbType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL data type to DbType
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Type)">
+            <summary>
+            Convert .Net type to TSQL data type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Data.DbType)">
+            <summary>
+            Convert DbType type to TSQL data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.DataTableConvert">
+            <summary>
+            把datatable转换为对象集合列表List&lt;T&gt;
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.DataTableConvert.ToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换成泛型对象列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.QueryableExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Extensions.QueryableExtension.Paged``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            IQueryable分页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="currentPage"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Extensions.ResponseModelFactory">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.ResponseModelFactory.CreateInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Extensions.ResponseModelFactory.CreateResultInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Models.Menu.Router">
+            <summary>
+            用于前端的路由对象
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Models.Menu.RouterMeta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.MenuGuid">
+            <summary>
+            权限关联的菜单GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.IsAssigned">
+            <summary>
+            权限是否已分配到当前角色
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionCode">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionName">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.MenuAlias">
+            <summary>
+            菜单别名(与前端路由配置中的name值保持一致)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.IsDefaultRouter">
+            <summary>
+            是否是默认前端路由
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel">
+            <summary>
+            请求响应实体
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.#ctor">
+            <summary>
+            请求响应实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.Code">
+            <summary>
+            响应代码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.Message">
+            <summary>
+            响应消息内容
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.Data">
+            <summary>
+            返回的响应数据
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetSuccess(System.String)">
+            <summary>
+            设置响应状态为成功
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetFailed(System.String)">
+            <summary>
+            设置响应状态为失败
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetIsTrial(System.String)">
+            <summary>
+            设置响应状态为体验版(返回失败结果)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetError(System.String)">
+            <summary>
+            设置响应状态为错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetNotFound(System.String)">
+            <summary>
+            设置响应状态为未知资源
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetNoPermission(System.String)">
+            <summary>
+            设置响应状态为无权限
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseModel.SetData(System.Object)">
+            <summary>
+            设置响应数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseResultModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseResultModel.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Models.Response.ResponseResultModel.SetData(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="totalCount"></param>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.MessageFeedBack.SurveyRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Department.DepartmentRequestPaload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.ParentGuid">
+            <summary>
+            上级菜单GUID
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.SystemMenuUuid">
+            <summary>
+            关联菜单GUID
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload">
+            <summary>
+            角色分配权限的请求载体类
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload.UserType">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload">
+            <summary>
+            请求实体
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.Sort">
+            <summary>
+            排序对象集合(支持多个字段排序)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.OrderBy">
+            <summary>
+            组合后的排序字符串
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.FirstSort">
+            <summary>
+            第一个排序字段(单个字段排序)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.RequestPayload.Kw">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Sort">
+            <summary>
+            排序实体对象
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Sort.#ctor">
+            <summary>
+            排序实体对象构造函数
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Sort.Field">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.Sort.Direct">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.RequestPayload.WorkStudy.PostJobsRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.Server.TokenHelper.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            在结果过滤器中刷新jwt的token
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Component">
+            <summary>
+            前端组件(.vue)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.HideInMenu">
+            <summary>
+            在菜单中隐藏
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.NotCache">
+            <summary>
+            不缓存页面
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.BeforeCloseFun">
+            <summary>
+            页面关闭前的回调函数
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.SystemMenuUuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Component">
+            <summary>
+            前端组件(.vue)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.HideInMenu">
+            <summary>
+            在菜单中隐藏
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.NotCache">
+            <summary>
+            不缓存页面
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.BeforeCloseFun">
+            <summary>
+            页面关闭前的回调函数
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree">
+            <summary>
+            用于iview的菜单树
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionCreateViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionEditViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionEditViewModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionJsonModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionJsonModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionJsonModel.PermissionTypeText">
+            <summary>
+            权限类型的显示文本
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree">
+            <summary>
+            用于角色权限的菜单树
+            </summary>
+        </member>
+        <member name="M:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.AllAssigned">
+            <summary>
+            当前菜单的所有权限都已分配到指定角色
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Permissions">
+            <summary>
+            当前菜单拥有的权限功能
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement.IsAssignedToRole">
+            <summary>
+            是否已分配到指定角色
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel">
+            <summary>
+            用户获得的角色实体对象
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel.UserGuid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel.AssignedRoles">
+            <summary>
+            已获得的角色代码集合
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.phoneNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.purePhoneNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.countryCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.watermark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.Watermark.timestamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemUser.Watermark.appid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.UpImgViewModel.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.UpImgViewModel.msg">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="P:HaiKanStudentDiningManagementSystem.Api.ViewModels.UpImgViewModel.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel)">
+            <summary>
+            创建菜单
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Edit(System.Guid)">
+            <summary>
+            编辑菜单
+            </summary>
+            <param name="guid">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel)">
+            <summary>
+            保存编辑后的菜单信息
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Tree(System.String)">
+            <summary>
+            菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Recover(System.String)">
+            <summary>
+            恢复菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.UpdateStatus(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.Status,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="status">菜单状态</param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuTreeHelper.BuildTree(System.Collections.Generic.List{HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController">
+            <summary>
+            权限控制器
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.#ctor(HaiKanStudentDiningManagementSystem.Api.Entities.haikanSDMSContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.List(HaiKanStudentDiningManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Create(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionCreateViewModel)">
+            <summary>
+            创建权限
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(System.Guid)">
+            <summary>
+            编辑权限
+            </summary>
+            <param name="code">权限惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionEditViewModel)">
+            <summary>
+            保存编辑后的权限信息
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Delete(System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Recover(System.String)">
+            <summary>
+            恢复权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.PermissionTree(System.String)">
+            <summary>
+            角色-权限菜单树
+            </summary>
+            <param name="code">角色编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateIsDelete(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateStatus(HaiKanStudentDiningManagementSystem.Api.Entities.Enums.CommonEnum.Status,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="status">权限状态</param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper.FillRecursive(System.Collections.Generic.List{HaiKanStudentDiningManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree},System.Collections.Generic.List{HaiKanStudentDiningManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="menus">菜单集合</param>
+            <param name="permissions">权限集合</param>
+            <param name="parentGuid">父级菜单GUID</param>
+            <param name="isSuperAdministrator">是否为超级管理员角色</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

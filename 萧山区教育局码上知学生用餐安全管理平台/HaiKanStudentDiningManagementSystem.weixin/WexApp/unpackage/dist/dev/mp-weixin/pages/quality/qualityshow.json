@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "光盘行动",
+  "usingComponents": {
+    "u-card": "/uview-ui/components/u-card/u-card",
+    "u-loading": "/uview-ui/components/u-loading/u-loading",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
+}

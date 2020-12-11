@@ -1,0 +1,24 @@
+2020-10-20 15:11:26,048 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 15:11:26,093 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 15:11:26,104 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 16:41:47,028 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 16:41:47,077 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 16:41:47,083 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 16:46:15,349 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 16:46:15,379 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 16:46:15,383 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 19:53:14,633 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 19:53:14,685 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 19:53:14,689 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 19:58:14,788 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 19:58:14,831 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 19:58:14,845 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 19:59:43,965 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 19:59:43,996 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 19:59:43,999 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 21:38:54,596 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 21:38:54,642 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 21:38:54,646 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api
+2020-10-20 21:56:16,046 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Application started. Press Ctrl+C to shut down.
+2020-10-20 21:56:16,116 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Hosting environment: Development
+2020-10-20 21:56:16,125 [1] INFO  Microsoft.Hosting.Lifetime [(null)]  - Content root path: D:\我的工作目录\萧山\萧山区教育局码上知学生用餐安全管理平台\HaiKanStudentDiningManagementSystem.Api

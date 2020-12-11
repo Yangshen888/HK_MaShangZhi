@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "校园新闻",
+  "usingComponents": {
+    "u-toast": "/uview-ui/components/u-toast/u-toast",
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-tabs-swiper": "/uview-ui/components/u-tabs-swiper/u-tabs-swiper",
+    "u-tag": "/uview-ui/components/u-tag/u-tag",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-line": "/uview-ui/components/u-line/u-line"
+  }
+}

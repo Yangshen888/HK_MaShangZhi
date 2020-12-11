@@ -1,0 +1,63 @@
+import axios from '@/libs/api.request'
+ 
+//列表
+export const GetList = (data) => {
+  return axios.request({
+    url: 'Acticle/Acticle/GetList',
+    method: 'post',
+    data
+  })
+}
+ 
+//添加
+export const GetCreate = (data) => {
+  return axios.request({
+    url: 'Acticle/Acticle/Create',
+    method: 'post',
+    data
+  })
+}
+ 
+ 
+//获取数据
+export const GetShow = (data) => {
+  return axios.request({
+    url: 'Acticle/Acticle/Show?guid=' + data,
+    method: 'get',
+  })
+}
+ 
+//编辑
+export const GetEdit = (data) => {
+  return axios.request({
+    url: 'Acticle/Acticle/Edit',
+    method: 'post',
+    data
+  })
+}
+ 
+// 
+export const Delete = (ids) => {
+  return axios.request({
+    url: 'Acticle/Acticle/delete/' + ids,
+    method: 'get'
+  })
+}
+ 
+// batch command
+export const Batch = (data) => {
+  return axios.request({
+    url: 'Acticle/Acticle/batch',
+    method: 'get',
+    params: data
+  })
+}
+
+// delete department
+export const deleteDepartment = (ids) => {
+    return axios.request({
+      url: 'Acticle/Acticle/delete/' + ids,
+      method: 'get'
+    })
+  }
+ 

@@ -1,0 +1,421 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [{
+	// 		"name": "test", //模式名称
+	// 		"path": "pages/componentsC/test/index", //启动页面，必选
+	// 		"query": "id=1&name=2" //启动参数，在页面的onLoad函数里面得到
+	// 	}] 
+	// },
+	"pages": [{
+			"path": "pages/login/selectSchool",
+			"style": {
+				"navigationBarTitleText": "选择学校"
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/cuisine/cuisinelist",
+			"style": {
+				"navigationBarTitleText": "菜品库类型"
+			}
+		},
+		{
+			"path": "pages/cuisine/cuisineview",
+			"style": {
+				"navigationBarTitleText": "菜品库列表"
+			}
+		},
+		{
+			"path": "pages/cuisine/cuisineshow",
+			"style": {
+				"navigationBarTitleText": "菜品库详情"
+			}
+		},
+		{
+			"path": "pages/canteenManage/showdetail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/canteenManage/moneydetail",
+			"style": {
+				"navigationBarTitleText": "账单详情"
+			}
+		},
+		{
+			"path": "pages/weekmenu/menu",
+			"style": {
+				"navigationBarTitleText": "菜单"
+			}
+		},
+		{
+			"path": "pages/weekmenu/menulist",
+			"style": {
+				"navigationBarTitleText": "菜单列表"
+			}
+		},
+		{
+			"path": "pages/flow/flow",
+			"style": {
+				"navigationBarTitleText": "成菜流程"
+			}
+		},
+		{
+			"path": "pages/flow/flowupload",
+			"style": {
+				"navigationBarTitleText": "成菜流程上传"
+			}
+		},
+		{
+			"path": "pages/flow/wlflowupload",
+			"style": {
+				"navigationBarTitleText": "成菜流程网络上传"
+			}
+		},
+		{
+			"path": "pages/workstudy/home",
+			"style": {
+				"navigationBarTitleText": "勤工俭学"
+			}
+		},
+		{
+			"path": "pages/canteenManage/plandetail",
+			"style": {
+				"navigationBarTitleText": "管理方案详情"
+			}
+		},
+		{
+			"path": "pages/workstudy/postjobsappeal",
+			"style": {
+				"navigationBarTitleText": "勤工俭学"
+			}
+		},
+		{
+			"path": "pages/messagefeedback/index",
+			"style": {
+				"navigationBarTitleText": "信息反馈"
+			}
+		},
+		{
+			"path": "pages/messagefeedback/messageboard",
+			"style": {
+				"navigationBarTitleText": "留言板"
+			}
+		},
+		{
+			"path": "pages/messagefeedback/messageback",
+			"style": {
+				"navigationBarTitleText": "留言反馈",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/canteenManage/canteenManage",
+			"style": {
+				"navigationBarTitleText": "食堂管理"
+			}
+		},
+		{
+			"path": "pages/canteenManage/message",
+			"style": {
+				"navigationBarTitleText": "人员培训信息"
+			}
+		},
+		{
+			"path": "pages/canteenManage/plan",
+			"style": {
+				"navigationBarTitleText": "管理方案"
+			}
+		},
+		{
+			"path": "pages/canteenManage/money",
+			"style": {
+				"navigationBarTitleText": "电子台账"
+			}
+		},
+		{
+			"path": "pages/quality/quality",
+			"style": {
+				"navigationBarTitleText": "光盘行动"
+			}
+		},
+		{
+			"path": "pages/quality/qualityshow",
+			"style": {
+				"navigationBarTitleText": "光盘行动"
+			}
+		},
+		{
+			"path": "pages/campusnews/news",
+			"style": {
+				"navigationBarTitleText": "校园新闻"
+			}
+		},
+		{
+			"path": "pages/campusnews/shownew",
+			"style": {
+				"navigationBarTitleText": "文化详情"
+			}
+		},
+		{
+			"path": "pages/messagefeedback/report",
+			"style": {
+				"navigationBarTitleText": "举报信箱"
+			}
+		},
+		{
+			"path": "pages/messagefeedback/survey",
+			"style": {
+				"navigationBarTitleText": "问卷调查",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/messagefeedback/surveyanswer",
+			"style": {
+				"navigationBarTitleText": "问卷填写"
+			}
+		},
+		{
+			"path": "pages/userinfo/userinfo",
+			"style": {
+				"navigationBarTitleText": "员工管理"
+			}
+		},
+		{
+			"path": "pages/userinfo/userinfolist",
+			"style": {
+				"navigationBarTitleText": "员工详情"
+			}
+		},
+		{
+			"path": "pages/acticle/acticle",
+			"style": {
+				"navigationBarTitleText": "账务公开"
+			}
+		},
+		{
+			"path": "pages/acticle/acticleshow",
+			"style": {
+				"navigationBarTitleText": "食堂账务详情"
+			}
+		},
+
+		// 演示-组件 
+		{
+			"path": "pages/example/components",
+			"style": {
+				"navigationBarTitleText": "组件"
+			}
+		},
+		// avatarCropper-头像裁剪
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		// 演示-工具
+		{
+			"path": "pages/example/js",
+			"style": {
+				"navigationBarTitleText": "工具"
+			}
+		},
+		// 演示-模板
+		{
+			"path": "pages/example/template",
+			"style": {
+				"navigationBarTitleText": "模板"
+			}
+		},
+		// fullScreen-压窗屏
+		{
+			"path": "uview-ui/components/u-full-screen/u-full-screen",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in",
+					"background": "transparent",
+					"backgroundColor": "rgba(0,0,0,0)",
+					"popGesture": "none"
+				}
+			}
+		}, {
+			"path": "pages/diningRoom/kitchenVideo",
+			"style": {
+				"navigationBarTitleText": "厨房视频"
+			}
+		}, {
+			"path": "pages/diningRoom/LiveShot",
+			"style": {
+				"navigationBarTitleText": "每餐实拍"
+			}
+		}, {
+			"path": "pages/diningRoom/diningRoomList",
+			"style": {
+				"navigationBarTitleText": "阳光食堂"
+			}
+		}, {
+			"path": "pages/diningRoom/LiveShotShowInfo",
+			"style": {
+				"navigationBarTitleText": "实拍信息"
+			}
+		}, {
+			"path": "pages/diningRoom/PurchaseList",
+			"style": {
+				"navigationBarTitleText": "采购信息公示"
+			}
+		}, {
+			"path": "pages/diningRoom/PurchaseInfo",
+			"style": {
+				"navigationBarTitleText": "采购信息"
+			}
+		},
+		{
+			"path": "pages/diningRoom/LiveShotUpdate",
+			"style": {
+				"navigationBarTitleText": "每餐实拍上传"
+			}
+		}, {
+			"path": "pages/login/WxAuthLogin",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		}, {
+			"path": "pages/LinkToWeb",
+			"style": {}
+		}, {
+			"path": "pages/diningRoom/UpKitchenVideo",
+			"style": {
+				"navigationBarTitleText": "视频上传"
+			}
+		},  {
+			"path": "pages/diningRoom/wlkitchenvideo",
+			"style": {
+				"navigationBarTitleText": "视频上传"
+			}
+		}, {
+			"path": "pages/diningRoom/purchaseRecordToUp",
+			"style": {
+				"navigationBarTitleText": "采购记录上传"
+			}
+		}
+	    ,{
+            "path" : "pages/pay/pay",
+            "style" : {
+				"navigationBarTitleText": "支付"
+			}
+        }
+        ,
+		{
+			"path": "pages/diningRoom/QRcode",
+			"style": {
+				"navigationBarTitleText": "支付二维码"
+			}
+		},{
+            "path" : "pages/weekmenu/menuInfo",
+            "style" : {
+				"navigationBarTitleText":"菜品详情"
+				
+			}
+        }
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/sampleinfo",
+            "style" : {
+				"navigationBarTitleText":"食品留样详情"
+			}
+        }
+        
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/disinfectioninfo",
+            "style" : {
+				"navigationBarTitleText":"消毒记录详情"
+			}
+        }
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/pesticideinfo",
+            "style" : {
+				"navigationBarTitleText":"农药残留检测详情"
+			}
+        }
+        
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/inspectioninfo",
+            "style" : {
+				"navigationBarTitleText":"人员晨检详情"
+			}
+        }
+        
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/inspectionshow",
+            "style" : {
+        		"navigationBarTitleText":"人员晨检详情"
+        	}
+        }
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/purchaseinfo",
+            "style" : {
+				"navigationBarTitleText":"采购台账详情"
+			}
+        }
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/wasteinfo",
+            "style" : {
+				"navigationBarTitleText":"废弃物处理说明"
+			}
+        }
+        ,{
+            "path" : "pages/canteenManage/moneyInfo/synthesizeinfo",
+            "style" : {
+				"navigationBarTitleText":"综合台账"
+			}
+        }
+    ],
+	"subPackages": [],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#909399",
+		"selectedColor": "#303133",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/example/components",
+				"iconPath": "static/uview/example/component.png",
+				"selectedIconPath": "static/uview/example/component_select.png",
+				"text": "组件"
+			},
+			{
+				"pagePath": "pages/example/js",
+				"iconPath": "static/uview/example/js.png",
+				"selectedIconPath": "static/uview/example/js_select.png",
+				"text": "工具"
+			},
+			{
+				"pagePath": "pages/example/template",
+				"iconPath": "static/uview/example/template.png",
+				"selectedIconPath": "static/uview/example/template_select.png",
+				"text": "模板"
+			}
+		]
+	}
+}

@@ -1,0 +1,8 @@
+
+page {
+	background-color: rgb(240, 242, 244);
+}
+.wrap {
+	padding: 0 40rpx;
+}
+

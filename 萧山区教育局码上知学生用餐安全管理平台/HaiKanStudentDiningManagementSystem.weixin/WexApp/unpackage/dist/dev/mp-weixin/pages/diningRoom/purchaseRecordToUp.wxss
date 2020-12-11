@@ -1,0 +1,33 @@
+
+.wrap {
+	padding: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	height: calc(100vh - 0px);
+	width: 100%;
+}
+.dlbutton {
+	color: #ffffff;
+	font-size: 34rpx;
+	width: 470rpx;
+	height: 100rpx;
+	background: -webkit-linear-gradient(right, rgba(63, 205, 235, 1), rgba(188, 226, 158, 1));
+	background: linear-gradient(-90deg, rgba(63, 205, 235, 1), rgba(188, 226, 158, 1));
+	box-shadow: 0rpx 0rpx 13rpx 0rpx rgba(164, 217, 228, 0.2);
+	border-radius: 50rpx;
+	line-height: 100rpx;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40rpx;
+}
+.dlbutton-hover {
+	background: -webkit-linear-gradient(right, rgba(63, 205, 235, 0.9), rgba(188, 226, 158, 0.9));
+	background: linear-gradient(-90deg, rgba(63, 205, 235, 0.9), rgba(188, 226, 158, 0.9));
+}
+

@@ -1,0 +1,31 @@
+
+page {
+	height: 100%;
+}
+.topBox{
+	margin: 20rpx 0;
+	float: left;
+	width: 33%; 
+	height: 40px;
+	text-align: center;
+}
+.scollBox {
+	background-color: #ffb7bb;
+	float: left;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	line-height: 80rpx;
+	margin: 30rpx;
+}
+.numberBlock {
+	display: inline-block;
+	width: 200rpx;
+}
+.grid-text{
+	font-size: 24rpx;
+}
+

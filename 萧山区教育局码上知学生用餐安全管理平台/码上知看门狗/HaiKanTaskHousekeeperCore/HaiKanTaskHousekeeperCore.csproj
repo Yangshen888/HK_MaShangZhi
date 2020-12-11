@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60F74E9E-AD58-4E57-B71E-C9D293608DF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaiKanTaskHousekeeperCore</RootNamespace>
+    <AssemblyName>HaiKanTaskHousekeeperCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Haikan2">
+      <HintPath>C:\Users\Administrator\Desktop\最新海看dll\Haikan2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.9\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.EntityFramework.8.0.18\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\departments.cs" />
+    <Compile Include="Data\disinfections.cs" />
+    <Compile Include="Data\disinfection_records.cs" />
+    <Compile Include="Data\inspections.cs" />
+    <Compile Include="Data\inspection_information.cs" />
+    <Compile Include="Data\logs.cs" />
+    <Compile Include="Data\migrations.cs" />
+    <Compile Include="Data\monitors.cs" />
+    <Compile Include="Data\MSZDJ.cs" />
+    <Compile Include="Data\orgs.cs" />
+    <Compile Include="Data\pesticides.cs" />
+    <Compile Include="Data\purchases.cs" />
+    <Compile Include="Data\samples.cs" />
+    <Compile Include="Data\screenshots.cs" />
+    <Compile Include="Data\world_barn_buyers.cs" />
+    <Compile Include="Data\world_barn_goods.cs" />
+    <Compile Include="Data\world_barn_goods_categories.cs" />
+    <Compile Include="Data\world_barn_orders.cs" />
+    <Compile Include="Data\world_barn_order_items.cs" />
+    <Compile Include="Data\world_barn_users.cs" />
+    <Compile Include="DingDingHelpers.cs" />
+    <Compile Include="mData\BillState.cs" />
+    <Compile Include="mData\Class.cs" />
+    <Compile Include="mData\Cuisine.cs" />
+    <Compile Include="mData\ElectronicBill.cs" />
+    <Compile Include="mData\Flow.cs" />
+    <Compile Include="mData\FoodType.cs" />
+    <Compile Include="mData\Ingredient.cs" />
+    <Compile Include="mData\KitchenVideo.cs" />
+    <Compile Include="mData\LiveShot.cs" />
+    <Compile Include="mData\ManagePlan.cs" />
+    <Compile Include="mData\MealFlow.cs" />
+    <Compile Include="mData\MessageBoard.cs" />
+    <Compile Include="mData\MSZ.cs" />
+    <Compile Include="mData\NWeekMenu.cs" />
+    <Compile Include="mData\Order.cs" />
+    <Compile Include="mData\Postjobs.cs" />
+    <Compile Include="mData\PostJobsAppeal.cs" />
+    <Compile Include="mData\PurchaseRecord.cs" />
+    <Compile Include="mData\Quality.cs" />
+    <Compile Include="mData\Report.cs" />
+    <Compile Include="mData\School.cs" />
+    <Compile Include="mData\SchoolJour.cs" />
+    <Compile Include="mData\SchoolLife.cs" />
+    <Compile Include="mData\Student.cs" />
+    <Compile Include="mData\StudentBill.cs" />
+    <Compile Include="mData\SurverUser.cs" />
+    <Compile Include="mData\Survey.cs" />
+    <Compile Include="mData\SurveyAnswer.cs" />
+    <Compile Include="mData\SurveyQuestions.cs" />
+    <Compile Include="mData\SurveyQuestionsItems.cs" />
+    <Compile Include="mData\SystemIcon.cs" />
+    <Compile Include="mData\SystemLog.cs" />
+    <Compile Include="mData\SystemMenu.cs" />
+    <Compile Include="mData\SystemPermission.cs" />
+    <Compile Include="mData\SystemRole.cs" />
+    <Compile Include="mData\SystemRolePermissionMapping.cs" />
+    <Compile Include="mData\SystemUser.cs" />
+    <Compile Include="mData\SystemUserRoleMapping.cs" />
+    <Compile Include="mData\Train.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
